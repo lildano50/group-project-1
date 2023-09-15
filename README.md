@@ -1,4 +1,4 @@
-# What to Do
+# What to Do - Project Name
 
 
 ## Description
@@ -20,6 +20,7 @@ As someone in a new area or looking for things to do around the town I live in, 
     - [] Sort events chronologically
     - [] Sort by genre of activity
     - [] Sort by distance
-- [] Add events to scheduler
+- [] Add events to scheduler (local storage)
+- [] Search history (local storage)
 
 ## Wireframe
