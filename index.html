@@ -12,17 +12,17 @@
 <body>
   <div>
     <div>
-      <h1>What to Do...</h1>
-      <h3>Enter your zip code to find things to do in your area!</h3>
-      <form id="zip-code">
-        <input id="search-input">
-        <select id="criteria">
-          <option value="" disabled selected>Select a sort by option...</option>
+      <h1 class="flex-auto text-xl text-center bg-green-300 m-5">What to Do...</h1>
+      <h3 class="flex flex-col m-1 text-center">Enter your zip code to find things to do in your area!</h3>
+      <form class="m-auto" id="zip-code">
+        <input class=" bg-gray-300 w-6/12 m-auto block" id="search-input"></input>
+        <select class="w-6/12 bg-yellow-200 m-auto block" id="criteria">
+          <option class="" value="" disabled selected>Select a sort by option...</option>
           <option value="date">Date</option>
           <option value="distance">Distance</option>
           <option value="activity">Activity</option>
         </select>
-        <button id="search-button">Tell me what to do!</button>
+        <button class="m-auto block bg-blue-400 w-3/12" id="search-button">Tell me what to do!</button>
       </form>
     </div>
   </div>
