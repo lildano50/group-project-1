@@ -4,30 +4,29 @@
 <head>
   <meta charset="UTF-8" />
   <title>What to Do</title>
-  <!-- <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400&family=Merriweather:wght@700&display=swap" -->
-    <!-- rel="stylesheet" /> -->
-  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/tailwindcss@^2.2/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
-<body>
-  <div>
-    <div>
-      <h1>What to Do...</h1>
-      <h3>Enter your zip code to find things to do in your area!</h3>
-      <form id="zip-code">
-        <input id="search-input">
-        <select id="criteria">
-          <option value="" disabled selected>Select a sort by option...</option>
-          <option value="date">Date</option>
-          <option value="distance">Distance</option>
-          <option value="activity">Activity</option>
-        </select>
-        <button id="search-button">Tell me what to do!</button>
-      </form>
-    </div>
+<body class="bg-gray-100 flex justify-center items-center h-screen">
+  <div class="text-center p-4">
+    <h1 class="text-4xl font-bold">What to Do...</h1>
+    <h3 class="text-lg mt-2">Enter your zip code to find things to do in your area!</h3>
+    <form id="zip-code" class="mt-4">
+      <input id="search-input" class="px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500"
+        placeholder="Enter your zip code" type="text">
+      <select id="criteria"
+        class="px-4 py-2 ml-2 border rounded-lg focus:outline-none focus:border-blue-500">
+        <option value="" disabled selected>Select a sort by option...</option>
+        <option value="date">Date</option>
+        <option value="distance">Distance</option>
+        <option value="activity">Activity</option>
+      </select>
+      <button id="search-button"
+        class="px-4 py-2 ml-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 focus:outline-none focus:bg-blue-600"
+        type="button">Tell me what to do!</button>
+    </form>
   </div>
 
-  <script src="script.js"></script>
 </body>
 
 </html>
