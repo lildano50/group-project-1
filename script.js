@@ -21,4 +21,42 @@ function getZip(event){
     client.send();
 }
 
+
+function findEvents(event){
+    event.preventDefault();
+
+    fetch("https://www.boredapi.com/api/activity/")
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            console.log(data)
+    })
+};
+
+function getEvents() {
+    const url = 'https://real-time-events-search.p.rapidapi.com/search-events?query=sports%20in%20Austin&start=0';
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': '251df9cb24mshac0bc1e3e304557p1c2fe2jsn4619ef770dfc',
+            'X-RapidAPI-Host': 'real-time-events-search.p.rapidapi.com'
+        }
+    };
+    
+    try {
+        fetch(url, options)
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                console.log(data)
+            })
+    } catch (error) {
+        console.error(error);
+    }
+}
+
 zipCode.addEventListener('submit', getZip)
+zipCode.addEventListener('submit', getEvents)
+zipCode.addEventListener('submit', findEvents)
