@@ -12,6 +12,7 @@ As someone in a new area or looking for things to do around the town I live in, 
 1. https://www.boredapi.com/
 2a. https://www.zippopotam.us/
 2b. https://developers.google.com/maps/
+3. https://rapidapi.com/letscrape-6bRBa3QguO5/api/real-time-events-search/
 
 
 ## Tasks
