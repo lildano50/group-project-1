@@ -41,8 +41,10 @@ document.getElementById("search-button").addEventListener("click", function () {
 //currently console logs all zip code info when zip code is entered in input form
 
 // Two variables needed for this function: city and event
-function getEvents(city, event) {
-    const url = 'https://real-time-events-search.p.rapidapi.com/search-events?query=' + event + '%20in%20' + city + '&start=0';
+function getEvents(location) {
+  eventArray = ["concerts", "sports", "classes", "movies", "plays", "festivals"]
+  let event = eventArray[Math.floor(Math.random()*items.eventArray)]
+    const url = 'https://real-time-events-search.p.rapidapi.com/search-events?query=' + event + '%20in%20' + location + '&start=0';
     const options = {
         method: 'GET',
         headers: {
