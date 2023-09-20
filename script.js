@@ -1,39 +1,41 @@
 // Function to fetch city, state, and country information based on a zip code using the Zippopotam API
-function fetchCityStateCountry(zipCode) {
-    return fetch(`https://api.zippopotam.us/us/${zipCode}`)
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error('Invalid zip code or API error');
-        }
-        return response.json();
-      })
-      .then((data) => {
-        const city = data.places[0]['place name'];
-        const state = data.places[0]['state abbreviation'];
-        const country = 'United States'; // You can hardcode the country based on the API endpoint
 
-        return { city, state, country };
-      })
-      .catch((error) => {
-        console.error('Error fetching city, state, and country information:', error);
-        throw error; // Rethrow the error to handle it in the fetchRandomActivityAndDisplay function
-      });
-  }
-
+// Add an event listener to the search button
+document.getElementById("search-button").addEventListener("click", function () {
+  // Get the zip code entered by the user
+  const zipCode = document.getElementById("search-input").value;
+  // Make a GET request to the Zippopotam API
+  fetch(`https://api.zippopotam.us/us/${zipCode}`)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Zip code not found");
+      }
+      return response.json();
+    })
+    .then((data) => {
+      // Clear any previous results
+      const ul = document.querySelector("#results ul");
+      ul.innerHTML = "";
+      // Display the city in the results
+      const city = data.places[0]["place name"];
+      const li = document.createElement("li");
+      li.textContent = `City: ${city}`;
+      ul.appendChild(li);
+    })
+    .catch((error) => {
+      // Handle errors, for example, display an error message
+      const ul = document.querySelector("#results ul");
+      ul.innerHTML = `<li>${error.message}</li>`;
+    });
+});
   // Event listener for the "Tell me what to do!" button
-  document.getElementById('search-button').addEventListener('click', function () {
-    // Call the function to fetch and display a random activity with city, state, and country
-    fetchRandomActivityAndDisplay();
-  });
+  // document.getElementById('search-button').addEventListener('click', function () {
+    // Call the function to fetch and display a random activity with city
+  //   console.log(zip);
+  //   fetchCityStateCountry(zip);
+  
+  // });
 
-
-
-
-  /*
-
-  This is the other code
-
-  */
 
 //test api call for zippopotum.us
 //currently console logs all zip code info when zip code is entered in input form
@@ -62,6 +64,6 @@ function getEvents(city, event) {
     }
 }
 
-zipCode.addEventListener('submit', getZip)
-zipCode.addEventListener('submit', getEvents)
-zipCode.addEventListener('submit', findEvents)
+// zipCode.addEventListener('submit', getZip)
+// zipCode.addEventListener('submit', getEvents)
+// zipCode.addEventListener('submit', findEvents)
