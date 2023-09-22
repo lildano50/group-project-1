@@ -1,0 +1,22 @@
+.eventName {
+   color: yellow;
+   margin-bottom: 4px;
+   margin-top: 4px;
+   margin-right: 20%;
+   background-color: blue;
+   border-radius: 25px;
+   width: 40%;
+  
+}
+
+.eventButton {
+   color: white;
+   background-color: #3b82f6;
+   box-shadow: 5px 2px 2px rgb(12, 0, 0);
+   border-radius: 25px;
+   padding: 5px;
+   margin-top: 3px;
+   margin-bottom: 3px;
+   font-size: small;
+}
+}
