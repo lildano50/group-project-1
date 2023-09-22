@@ -5,29 +5,48 @@
   <meta charset="UTF-8" />
   <title>What to Do</title>
   <link href="https://unpkg.com/tailwindcss@^2.2/dist/tailwind.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet"> -->
 </head>
 
-<body class="bg-gray-100 flex-col justify-center items-center h-screen">
+<body class="bg-green-400 flex-col justify-center items-center h-screen">
   <div class="text-center p-4">
+
+    <!-- Title -->
     <h1 class="text-4xl font-bold">What to Do...</h1>
+    <!-- Subtitle -->
     <h3 class="text-lg mt-2">Enter your zip code to find things to do in your area!</h3>
     <form id="zip-code" class="mt-4">
-      <input id="search-input" class="px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500"
+
+      <!-- User Input -->
+      <input id="search-input" class="px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500 shadow-lg"
         placeholder="Enter your zip code" type="text">
+
+        <!-- Pulldown Menu -->
       <select id="criteria"
-        class="px-4 py-2 ml-2 border rounded-lg focus:outline-none focus:border-blue-500">
+        class="px-4 py-2 ml-2 border rounded-lg focus:outline-none focus:border-blue-500 shadow-lg">
         <option value="" disabled selected>Select a sort by option...</option>
         <option value="date">Date</option>
         <option value="distance">Distance</option>
         <option value="activity">Activity</option>
       </select>
+
+      <!-- Button -->
       <button id="search-button"
-        class="px-4 py-2 ml-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 focus:outline-none focus:bg-blue-600"
+        class="px-4 py-2 ml-2 bg-blue-700 text-white rounded-lg hover:bg-blue-600 focus:outline-none focus:bg-blue-600 shadow-lg"
         type="button">Tell me what to do!</button>
     </form>
+
+    <!-- Results -->
     <div id="results" class="mt-4">
       <ul>
 
+      </ul>
+    </div>
+
+    <!-- My List -->
+    <div id="myList" class="mt-4">
+      <ul>
+        
       </ul>
     </div>
   </div>

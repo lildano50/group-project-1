@@ -65,6 +65,7 @@ function getEvents(location) {
                   const eventName = data.data[i].name;
                   const li = document.createElement("li");
                   li.textContent = `Event Name: ${eventName} - `;
+                  li.setAttribute("class", "eventName");
                   li.setAttribute("id","name"+ i)
                   ul.appendChild(li);
                   const btn = document.createElement("button");
