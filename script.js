@@ -21,7 +21,6 @@ function zipToCity(event) {
       return response.json();
     })
     .then(function(data) {
-      console.log(data);
       getEvents(data.places[0]["place name"])
     })
     .catch((error) => {
@@ -58,10 +57,7 @@ function getEvents(location) {
                 ul.innerHTML = `Finding events for ${event} in your area!`;
                 //For loop to pull all events in the city and event type used in the API and create a list
                 //For loop will list all events pulled from the API and a button at the end of each event
-                //In theory, the button could be pressed to then add to a to-do list or agenda. 
-                //Currently nothing in the addEventListener function
-                for (var i=0; i < data.data.length; i++){
-                  console.log(data.data[i]) //Console logging data to see what we can manipulate
+                for (var i=0; i < 10; i++){
                   const eventName = data.data[i].name;
                   const li = document.createElement("li");
                   li.textContent = `Event Name: ${eventName} - `;
@@ -69,16 +65,124 @@ function getEvents(location) {
                   li.setAttribute("id","name"+ i)
                   ul.appendChild(li);
                   const btn = document.createElement("button");
-                  btn.textContent = "Add Event";
+                  btn.textContent = "DO IT!";
                   btn.setAttribute("id","event"+ i); //Dynamically creates unique ID for each button
                   btn.setAttribute("class", "eventButton") //Dynamically creates same class for each button for styling purposes
                   li.appendChild(btn);
-                  const btnEvent = document.getElementById("event"+i);
-                  btnEvent.addEventListener("click", function(){
-                  })
               }
+              addEvents();
             })
     } catch (error) {
         console.error(error);
     }
+}
+
+function toDoList() {
+  const toDo = document.getElementById("myList");
+  toDo.textContent = "My To Do List:";
+}
+
+toDoList();
+function addEvents(){
+  $("#event0").click(function(){
+    const event0 = $("#name0").text();
+    localStorage.setItem("event0", event0);
+    const setEvent0 = $("#myList");
+    const getEvent0 = localStorage.getItem("event0");
+    const li = $("<li>")
+    li.text(getEvent0);
+    setEvent0.append(li)
+  })
+
+  $("#event1").click(function(){
+    const event1 = $("#name1").text();
+    localStorage.setItem("event1", event1);
+    const setEvent1 = $("#myList");
+    const getEvent1 = localStorage.getItem("event1");
+    const li = $("<li>")
+    li.text(getEvent1);
+    setEvent1.append(li)
+  })
+
+  $("#event2").click(function(){
+    const event2 = $("#name2").text();
+    localStorage.setItem("event2", event2);
+    const setEvent2 = $("#myList");
+    const getEvent2 = localStorage.getItem("event2");
+    const li = $("<li>")
+    li.text(getEvent2);
+    setEvent2.append(li)
+  })
+
+  $("#event3").click(function(){
+    const event3 = $("#name3").text();
+    localStorage.setItem("event3", event3);
+    const setEvent3 = $("#myList");
+    const getEvent3 = localStorage.getItem("event3");
+    const li = $("<li>")
+    li.text(getEvent3);
+    setEvent3.append(li)
+  })
+
+  $("#event4").click(function(){
+    const event4 = $("#name4").text();
+    localStorage.setItem("event4", event4);
+    const setEvent4 = $("#myList");
+    const getEvent4 = localStorage.getItem("event4");
+    const li = $("<li>")
+    li.text(getEvent4);
+    setEvent4.append(li)
+  })
+
+  $("#event5").click(function(){
+    const event5 = $("#name5").text();
+    localStorage.setItem("event5", event5);
+    const setEvent5 = $("#myList");
+    const getEvent5 = localStorage.getItem("event5");
+    const li = $("<li>")
+    li.text(getEvent5);
+    setEvent5.append(li)
+  })
+
+  $("#event6").click(function(){
+    const event6 = $("#name6").text();
+    localStorage.setItem("event6", event6);
+    const setEvent6 = $("#myList");
+    const getEvent6 = localStorage.getItem("event6");
+    const li = $("<li>")
+    li.text(getEvent6);
+    setEvent6.append(li)
+  })
+
+  $("#event7").click(function(){
+    const event7 = $("#name7").text();
+    localStorage.setItem("event7", event7);
+    const setEvent7 = $("#myList");
+    const getEvent7 = localStorage.getItem("event7");
+    const li = $("<li>")
+    li.text(getEvent7);
+    setEvent7.append(li)
+  })
+
+  $("#event8").click(function(){
+    const event8 = $("#name8").text();
+    localStorage.setItem("event8", event8);
+    const setEvent8 = $("#myList");
+    const getEvent8 = localStorage.getItem("event8");
+    const li = $("<li>")
+    li.text(getEvent8);
+    setEvent8.append(li)
+  })
+
+  $("#event9").click(function(){
+    const event9 = $("#name9").text();
+    localStorage.setItem("event9", event9);
+    const setEvent9 = $("#myList");
+    const getEvent9 = localStorage.getItem("event9");
+    const li = $("<li>")
+    li.text(getEvent9);
+    setEvent9.append(li)
+  })
+
+
 }
