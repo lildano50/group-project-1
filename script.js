@@ -54,7 +54,9 @@ function getEvents(location) {
                 //Some code from Dasarathan's function moved down to create a list of events
                 const ul = document.querySelector("#results ul");
                 ul.innerHTML = ""; 
-                ul.innerHTML = `Finding events for ${event} in your area!`;
+                
+                ul.innerHTML = `<p class="text-4xl font-bold">Finding events for ${event} in your area!</p>`;
+
                 //For loop to pull all events in the city and event type used in the API and create a list
                 //For loop will list all events pulled from the API and a button at the end of each event
                 for (var i=0; i < 10; i++){
@@ -78,8 +80,17 @@ function getEvents(location) {
 }
 
 function toDoList() {
-  const toDo = document.getElementById("myList");
-  toDo.textContent = "My To Do List:";
+// Get the element with the ID "myList"
+var toDo = document.getElementById("myList");
+
+// Apply Tailwind CSS classes
+toDo.classList.add("mt-4", "text-2xl", "font-bold", "text-blue-500");
+
+// Set the text content
+toDo.textContent = "My To Do List:";
+
+
+
 }
 
 toDoList();
