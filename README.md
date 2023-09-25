@@ -26,5 +26,7 @@ As someone in a new area or looking for things to do around the town I live in, 
 
 ## Link to working application
 
+https://lildano50.github.io/group-project-1/
+
 ## Screenshot of working application
 ![Screenshot 2023-09-25 120355](https://github.com/lildano50/group-project-1/assets/119541939/38ed293b-a855-44da-9850-d7e49e681079)
