@@ -101,7 +101,7 @@ function addEvents(){
     const setEvent0 = $("#myList");
     const getEvent0 = localStorage.getItem("event0");
     const li = $("<li>")
-    li.text(getEvent0);
+    li.text(getEvent0.substring(0, getEvent0.length-8));
     setEvent0.append(li)
   })
 
@@ -111,7 +111,7 @@ function addEvents(){
     const setEvent1 = $("#myList");
     const getEvent1 = localStorage.getItem("event1");
     const li = $("<li>")
-    li.text(getEvent1);
+    li.text(getEvent1.substring(0, getEvent1.length-8));
     setEvent1.append(li)
   })
 
@@ -121,7 +121,7 @@ function addEvents(){
     const setEvent2 = $("#myList");
     const getEvent2 = localStorage.getItem("event2");
     const li = $("<li>")
-    li.text(getEvent2);
+    li.text(getEvent2.substring(0, getEvent2.length-8));
     setEvent2.append(li)
   })
 
@@ -131,7 +131,7 @@ function addEvents(){
     const setEvent3 = $("#myList");
     const getEvent3 = localStorage.getItem("event3");
     const li = $("<li>")
-    li.text(getEvent3);
+    li.text(getEvent3.substring(0, getEvent3.length-8));
     setEvent3.append(li)
   })
 
@@ -141,7 +141,7 @@ function addEvents(){
     const setEvent4 = $("#myList");
     const getEvent4 = localStorage.getItem("event4");
     const li = $("<li>")
-    li.text(getEvent4);
+    li.text(getEvent4.substring(0, getEvent4.length-8));
     setEvent4.append(li)
   })
 
@@ -151,7 +151,7 @@ function addEvents(){
     const setEvent5 = $("#myList");
     const getEvent5 = localStorage.getItem("event5");
     const li = $("<li>")
-    li.text(getEvent5);
+    li.text(getEvent5.substring(0, getEvent5.length-8));
     setEvent5.append(li)
   })
 
@@ -161,7 +161,7 @@ function addEvents(){
     const setEvent6 = $("#myList");
     const getEvent6 = localStorage.getItem("event6");
     const li = $("<li>")
-    li.text(getEvent6);
+    li.text(getEvent6.substring(0, getEvent6.length-8));
     setEvent6.append(li)
   })
 
@@ -171,7 +171,7 @@ function addEvents(){
     const setEvent7 = $("#myList");
     const getEvent7 = localStorage.getItem("event7");
     const li = $("<li>")
-    li.text(getEvent7);
+    li.text(getEvent7.substring(0, getEvent7.length-8));
     setEvent7.append(li)
   })
 
@@ -181,7 +181,7 @@ function addEvents(){
     const setEvent8 = $("#myList");
     const getEvent8 = localStorage.getItem("event8");
     const li = $("<li>")
-    li.text(getEvent8);
+    li.text(getEvent8.substring(0, getEvent8.length-8));
     setEvent8.append(li)
   })
 
@@ -191,7 +191,7 @@ function addEvents(){
     const setEvent9 = $("#myList");
     const getEvent9 = localStorage.getItem("event9");
     const li = $("<li>")
-    li.text(getEvent9);
+    li.text(getEvent9.substring(0, getEvent9.length-8));
     setEvent9.append(li)
   })
 
